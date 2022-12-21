@@ -351,7 +351,7 @@
           } elseif ($HTTP_POST_VARS['copy_as'] == 'duplicate') {
 
               //Changes
-            $product_query = tep_db_query("select products_quantity, products_model, products_image, products_price, products_date_available, products_weight, products_length, products_width, products_heigth, products_tax_class_id, manufacturers_id from " . TABLE_PRODUCTS . " where products_id = '" . (int)$products_id . "'");
+            $product_query = tep_db_query("select products_quantity, products_model, products_image, products_price, products_date_available, products_weight, products_length, products_width, products_height, products_tax_class_id, manufacturers_id from " . TABLE_PRODUCTS . " where products_id = '" . (int)$products_id . "'");
 
             $product = tep_db_fetch_array($product_query);
 
