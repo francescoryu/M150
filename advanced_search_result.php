@@ -142,6 +142,9 @@
                        'PRODUCT_LIST_PRICE' => PRODUCT_LIST_PRICE,
                        'PRODUCT_LIST_QUANTITY' => PRODUCT_LIST_QUANTITY,
                        'PRODUCT_LIST_WEIGHT' => PRODUCT_LIST_WEIGHT,
+                        'PRODUCT_LIST_HEIGHT' => PRODUCT_LIST_HEIGHT, //Changes
+                        'PRODUCT_LIST_WIDTH' => PRODUCT_LIST_WIDTH,
+                        'PRODUCT_LIST_LENGTH' => PRODUCT_LIST_LENGTH,
                        'PRODUCT_LIST_IMAGE' => PRODUCT_LIST_IMAGE,
                        'PRODUCT_LIST_BUY_NOW' => PRODUCT_LIST_BUY_NOW);
 
@@ -172,6 +175,16 @@
       case 'PRODUCT_LIST_WEIGHT':
         $select_column_list .= 'p.products_weight, ';
         break;
+        //Changes
+        case 'PRODUCT_LIST_HEIGHT':
+            $select_column_list .= 'p.products_height, ';
+            break;
+        case 'PRODUCT_LIST_LENGTH':
+            $select_column_list .= 'p.products_length, ';
+            break;
+        case 'PRODUCT_LIST_WIDTH':
+            $select_column_list .= 'p.products_width, ';
+            break;
     }
   }
 
@@ -302,6 +315,16 @@
       case 'PRODUCT_LIST_WEIGHT':
         $order_str = " order by p.products_weight " . ($sort_order == 'd' ? 'desc' : '') . ", pd.products_name";
         break;
+        //Changes
+        case 'PRODUCT_LIST_HEIGHT':
+            $order_str = " order by p.products_height " . ($sort_order == 'd' ? 'desc' : '') . ", pd.products_name";
+            break;
+        case 'PRODUCT_LIST_WIDTH':
+            $order_str = " order by p.products_width " . ($sort_order == 'd' ? 'desc' : '') . ", pd.products_name";
+            break;
+        case 'PRODUCT_LIST_LENGTH':
+            $order_str = " order by p.products_length " . ($sort_order == 'd' ? 'desc' : '') . ", pd.products_name";
+            break;
       case 'PRODUCT_LIST_PRICE':
         $order_str = " order by final_price " . ($sort_order == 'd' ? 'desc' : '') . ", pd.products_name";
         break;
