@@ -63,6 +63,23 @@
         $lc_text = TABLE_HEADING_WEIGHT;
         $lc_align = 'right';
         break;
+
+        //changes
+    case 'PRODUCT_LIST_HEIGHT':
+        $lc_text = TABLE_HEADING_HEIGHT;
+        $lc_align = 'right';
+        break;
+    case 'PRODUCT_LIST_WIDTH':
+        $lc_text = TABLE_HEADING_WIDTH;
+        $lc_align = 'right';
+        break;
+    case 'PRODUCT_LIST_LENGTH':
+        $lc_text = TABLE_HEADING_LENGTH;
+        $lc_align = 'right';
+        break;
+
+
+
       case 'PRODUCT_LIST_IMAGE':
         $lc_text = TABLE_HEADING_IMAGE;
         $lc_align = 'center';
@@ -124,6 +141,19 @@
           case 'PRODUCT_LIST_WEIGHT':
             $prod_list_contents .= '        <td align="right">' . $listing['products_weight'] . '</td>';
             break;
+
+            //CHANGES
+            case 'PRODUCT_LIST_HEIGHT':
+                $prod_list_contents .= '        <td align="right">' . $listing['products_height'] . '</td>';
+                break;
+            case 'PRODUCT_LIST_WIDTH':
+                $prod_list_contents .= '        <td align="right">' . $listing['products_width'] . '</td>';
+                break;
+            case 'PRODUCT_LIST_LENGTH':
+                $prod_list_contents .= '        <td align="right">' . $listing['products_length'] . '</td>';
+                break;
+
+
           case 'PRODUCT_LIST_IMAGE':
             if (isset($HTTP_GET_VARS['manufacturers_id'])  && tep_not_null($HTTP_GET_VARS['manufacturers_id'])) {
               $prod_list_contents .= '        <td align="center"><a href="' . tep_href_link(FILENAME_PRODUCT_INFO, 'manufacturers_id=' . $HTTP_GET_VARS['manufacturers_id'] . '&products_id=' . $listing['products_id']) . '">' . tep_image(DIR_WS_IMAGES . $listing['products_image'], $listing['products_name'], SMALL_IMAGE_WIDTH, SMALL_IMAGE_HEIGHT) . '</a></td>';
