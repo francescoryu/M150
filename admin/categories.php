@@ -712,7 +712,7 @@ function showPiDelConfirm(piId) {
 
                 <tr>
                     <td class="main"><?php echo TEXT_PRODUCTS_HEIGHT; ?></td>
-                    <td class="main"><?php echo tep_draw_separator('pixel_trans.gif', '24', '15') . '&nbsp;' . tep_draw_input_field('products_hight', $pInfo->products_height); ?></td>
+                    <td class="main"><?php echo tep_draw_separator('pixel_trans.gif', '24', '15') . '&nbsp;' . tep_draw_input_field('products_height', $pInfo->products_height); ?></td>
                 </tr>
                 <tr>
                     <td class="main"><?php echo TEXT_PRODUCTS_LENGTH; ?></td>
