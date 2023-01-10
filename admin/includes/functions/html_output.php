@@ -220,6 +220,15 @@
     return $field;
   }
 
+
+
+
+
+
+
+
+
+
 ////
 // Output a form password field
   function tep_draw_password_field($name, $value = '', $required = false) {

@@ -218,7 +218,7 @@
                                 'products_date_available' => $products_date_available,
                                 'products_weight' => (float)tep_db_prepare_input($HTTP_POST_VARS['products_weight']),
 
-                                //Changes
+                                //Changes   abs()
                                 'products_height' => (float)tep_db_prepare_input($HTTP_POST_VARS['products_height']),
                                 'products_length' => (float)tep_db_prepare_input($HTTP_POST_VARS['products_length']),
                                 'products_width' => (float)tep_db_prepare_input($HTTP_POST_VARS['products_width']),
@@ -709,18 +709,18 @@ function showPiDelConfirm(piId) {
             <td class="main"><?php echo tep_draw_separator('pixel_trans.gif', '24', '15') . '&nbsp;' . tep_draw_input_field('products_weight', $pInfo->products_weight); ?></td>
           </tr>
 
-
+//changes
                 <tr>
                     <td class="main"><?php echo TEXT_PRODUCTS_HEIGHT; ?></td>
-                    <td class="main"><?php echo tep_draw_separator('pixel_trans.gif', '24', '15') . '&nbsp;' . tep_draw_input_field('products_height', $pInfo->products_height); ?></td>
+                    <td class="main"><?php echo tep_draw_separator('pixel_trans.gif', '24', '15') . '&nbsp;' . tep_draw_input_field('products_height', $pInfo->products_height, "min=0", false, "number", true); ?></td>
                 </tr>
                 <tr>
                     <td class="main"><?php echo TEXT_PRODUCTS_LENGTH; ?></td>
-                    <td class="main"><?php echo tep_draw_separator('pixel_trans.gif', '24', '15') . '&nbsp;' . tep_draw_input_field('products_length', $pInfo->products_length); ?></td>
+                    <td class="main"><?php echo tep_draw_separator('pixel_trans.gif', '24', '15') . '&nbsp;' . tep_draw_input_field('products_length', $pInfo->products_length, "min=0", false, "number", true); ?></td>
                 </tr>
                 <tr>
                     <td class="main"><?php echo TEXT_PRODUCTS_WIDTH; ?></td>
-                    <td class="main"><?php echo tep_draw_separator('pixel_trans.gif', '24', '15') . '&nbsp;' . tep_draw_input_field('products_width', $pInfo->products_width); ?></td>
+                    <td class="main"><?php echo tep_draw_separator('pixel_trans.gif', '24', '15') . '&nbsp;' . tep_draw_input_field('products_width', $pInfo->products_width, "min=0", false, "number", true); ?></td>
                 </tr>
 
 
