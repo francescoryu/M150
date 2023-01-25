@@ -219,9 +219,9 @@
                                 'products_weight' => (float)tep_db_prepare_input($HTTP_POST_VARS['products_weight']),
 
                                 //Changes   abs()
-                                'products_height' => (float)tep_db_prepare_input($HTTP_POST_VARS['products_height']),
-                                'products_length' => (float)tep_db_prepare_input($HTTP_POST_VARS['products_length']),
-                                'products_width' => (float)tep_db_prepare_input($HTTP_POST_VARS['products_width']),
+                                'products_height' => abs((float)tep_db_prepare_input($HTTP_POST_VARS['products_height'])),
+                                'products_length' => abs((float)tep_db_prepare_input($HTTP_POST_VARS['products_length'])),
+                                'products_width' => abs((float)tep_db_prepare_input($HTTP_POST_VARS['products_width'])),
 
                                 'products_status' => tep_db_prepare_input($HTTP_POST_VARS['products_status']),
                                 'products_tax_class_id' => tep_db_prepare_input($HTTP_POST_VARS['products_tax_class_id']),
